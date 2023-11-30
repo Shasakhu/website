@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>My first Interactive Website</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+
+            #content {
+                padding: 5px;
+                background-color: rgb(255, 174, 127);
+                width: 80%;
+                margin-left: 10%;
+                border-radius: 30px;
+            }
+
+            .newcontent {
+                padding: 5px;
+                background-color: rgb(58, 226, 43);
+                width: 80%;
+                margin-left: 10%;
+                border-radius: 10px;
+            }
+
+            #changeColorButton {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: rgb(165, 42, 99);
+                color: antiquewhite;
+                border: none;
+                cursor: pointer;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <h2>Welcome to My Simple Website</h2>
+        </div>
+        <br>
+        <div class="newcontent">
+            <p>This is a basis example of a website using HTML, CSS and JAVASCRIPT.</p>
+            <p>I have used a very simple website to show you all. This Web Development Course will teach you many new things hopefully.</p>
+        </div>
+        <br>
+        <div>
+            <button id ="changeColorButton">Change Background Color</button>
+        </div>
+
+        <script>
+            //Javascript to change the background color
+            document.getElementById("changeColorButton").addEventListener("click", function (){
+                //Generate a random color
+                const randomcolor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+                // Set the backgrouund color
+                document.body.style.backgroundColor = randomcolor;
+            });
+        </script>
+    </body>
+</html>
